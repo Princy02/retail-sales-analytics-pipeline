@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: mart_sales_trends_yearly
+    description: "Year-over-year sales, profit, and growth trends (2019-2023)."
+    columns:
+      - name: order_year
+        tests:
+          - not_null
+          - unique
+
+  - name: mart_sales_by_region_2023
+    description: "2023-only sales breakdown by region, state, and city type for executive reporting."
+    columns:
+      - name: region
+        tests:
+          - not_null
+
+  - name: mart_category_performance
+    description: "Sales and profit performance by category/sub-category across years."
+
+  - name: mart_profitability
+    description: "Profitability breakdown by category and discount band."

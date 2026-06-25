@@ -1,0 +1,18 @@
+# Copy this file to ~/.dbt/profiles.yml (create the ~/.dbt folder if it doesn't exist)
+# Fill in your own Snowflake trial account details below.
+# Never commit this file with real credentials to GitHub.
+
+retail_pipeline:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: <your_account_locator>      # e.g. ab12345.us-east-1
+      user: <your_username>
+      password: <your_password>
+      role: ACCOUNTADMIN
+      database: RETAIL_DB
+      warehouse: RETAIL_WH
+      schema: raw
+      threads: 4
+      client_session_keep_alive: False

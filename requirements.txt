@@ -1,0 +1,6 @@
+dbt-core>=1.7
+dbt-snowflake>=1.7
+snowflake-connector-python
+pandas
+dash
+plotly
